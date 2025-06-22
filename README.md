@@ -13,7 +13,7 @@ mkdir prisma_tutorial && cd prisma_tutorial && npm init
 npm i -D prisma && npm i @prisma/client
 ```
 
-3. Initialize prisma
+3. Initialize prisma. It creates directory "**project/prisma**".
 ```bash
 npx prisma init
 ```
