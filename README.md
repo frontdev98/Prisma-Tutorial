@@ -1,4 +1,5 @@
 # Prisma ORM tutorial
+[Visit Prisma Site](https://www.prisma.io/).
 
 Install extension [Prisma Extension](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma) (syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files).
 
@@ -22,11 +23,17 @@ npx prisma init
 // Make sure that USERNAME has rights to create database!
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://USERNAME:PASSWORD@localhost:5432/Projects?schema=sch_hwt_auth"
+  url      = env(DATABASE_URL)
 }
 ```
 
-5. Run first migration:
+5. Create file **.env** at root of the project and add next string:
+```bash
+# It creates database DATABASE in schema SCHEMA
+DATABASE_URL="postgresql://USERNAME:PASSWORD@localhost:5432/DATABASE?schema=SCHEMA"
+```
+
+6. Run first migration:
 ```bash
 npx prisma migrate
 
