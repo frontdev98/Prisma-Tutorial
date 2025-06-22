@@ -18,7 +18,7 @@ npm i -D prisma && npm i @prisma/client
 npx prisma init
 ```
 
-4. Open **prisma/schema.prisma** and replace corresponding strings:
+4. Make sure that **prisma/schema.prisma** contains next strings:
 ```prisma
 // Make sure that USERNAME has rights to create database!
 datasource db {
@@ -41,8 +41,8 @@ npx prisma migrate
 # You will see new file like prisma/migrations/242341234123_init/migration.sql"
 ```
 
-6. Initialize @prisma/client:
+7. Initialize @prisma/client:
 ```bash
-# This command generates object of models in JS/TS objects
+# This command generates objects of the database in JS/TS objects
 npx prisma generate
 ```
